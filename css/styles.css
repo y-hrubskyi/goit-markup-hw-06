@@ -747,7 +747,7 @@ img {
   fill: var(--accent-color);
 }
 
-.contact-form-field-wrapper:last-child {
+.contact-form-textarea-wrapper {
   margin-bottom: 16px;
 }
 
@@ -762,7 +762,7 @@ img {
 
   color: rgba(46, 47, 66, 0.4);
   background-color: transparent;
-  border: 1px solid rgba(46, 47, 66, 0.4);
+  border: 1px solid rgba(46, 47, 66, 0.2);
   border-radius: 4px;
   outline: transparent;
   resize: none;
@@ -782,15 +782,44 @@ img {
   border-color: var(--accent-color);
 }
 
-.contact-form-pivacy-policy {
+.contact-form-pivacy {
   margin-bottom: 24px;
 }
 
-.contact-form-checkbox-label {
+.contact-form-privacy-label {
+  display: flex;
+  align-items: center;
+
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
+}
+
+.contact-form-custom-checkbox {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+
+  fill: transparent;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.contact-form-privacy-checkbox:checked
+  + .contact-form-privacy-label
+  > .contact-form-custom-checkbox {
+  background-color: #404bbf;
+  fill: #ffffff;
+  border: none;
+}
+
+.contact-form-privacy-link {
+  color: #404bbf;
 }
 
 .contact-form-btn-send {
